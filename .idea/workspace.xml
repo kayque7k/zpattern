@@ -4,43 +4,7 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="46f66134-09e2-4146-90e1-9cdb92001a0a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/model/config/inject.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/model/interector/dataManager/dao/dao-user/dao-user.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/model/interector/dataManager/dao/dao-user/i-dao-user.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/model/interector/dataManager/database/z-data-base.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/model/interector/dataManager/entity/user-entity.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/model/interector/dataManager/repository/user-repository/i-user-repository.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/model/interector/dataManager/repository/user-repository/user-repository.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/model/interector/remote/api/login-service.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/model/interector/remote/api/service.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/model/interector/remote/interface/i-login-service.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/model/interector/remote/settings/api-settings.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/model/utils/dialog-utils.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/view/alter-user-view.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/view/home-view.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/view/login-view.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/view/register-user-view.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/view/splash-screen-view.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/viewmodel/binding/binding-alter-user-view.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/viewmodel/binding/binding-home-view.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/viewmodel/binding/binding-login-view.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/viewmodel/binding/binding-observable.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/viewmodel/binding/binding-register-user-view.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/viewmodel/binding/binding-splash-screen-view.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/viewmodel/login-viewmodel.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/viewmodel/token-viewmodel.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/viewmodel/user-viewmodel.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/test/widget_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/test/widget_test.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/zpattern.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/zpattern.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/zpattern_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/zpattern_test.dart" afterDir="false" />
-    </list>
+    <list default="true" id="46f66134-09e2-4146-90e1-9cdb92001a0a" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +39,7 @@
           <entry key="gitignore" value="1" />
           <entry key="iml" value="1" />
           <entry key="lock" value="2" />
-          <entry key="md" value="6" />
+          <entry key="md" value="8" />
           <entry key="yaml" value="14" />
         </counts>
       </usages-collector>
@@ -83,7 +47,7 @@
         <counts>
           <entry key="Dart" value="144" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="Markdown" value="6" />
+          <entry key="Markdown" value="8" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="YAML" value="14" />
         </counts>
@@ -91,14 +55,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dart" value="2482" />
-          <entry key="md" value="70" />
+          <entry key="md" value="79" />
           <entry key="yaml" value="48" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Dart" value="2482" />
-          <entry key="Markdown" value="70" />
+          <entry key="Markdown" value="79" />
           <entry key="YAML" value="48" />
         </counts>
       </usages-collector>
@@ -106,11 +70,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/zpattern.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="1465" column="22" selection-start-line="1465" selection-start-column="22" selection-end-line="1465" selection-end-column="22" />
+            <state relative-caret-position="561">
+              <caret line="1485" selection-start-line="1485" selection-end-line="1485" />
               <folding>
                 <element signature="e#11843#12598#0" />
                 <element signature="e#12620#13467#0" />
@@ -132,8 +96,18 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pubspec.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
+            <state relative-caret-position="-368">
               <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CHANGELOG.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor />
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -150,8 +124,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/example/pubspec.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="22" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="13" selection-end-column="22" />
+            <state relative-caret-position="170">
+              <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="323">
+                <caret line="19" column="49" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -189,11 +175,11 @@
         <option value="$PROJECT_DIR$/example/lib/view/home-view.dart" />
         <option value="$PROJECT_DIR$/example/lib/viewmodel/binding/binding-home-view.dart" />
         <option value="$PROJECT_DIR$/example/lib/view/login-view.dart" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/example/test/widget_test.dart" />
         <option value="$PROJECT_DIR$/pubspec.yaml" />
         <option value="$PROJECT_DIR$/test/zpattern_test.dart" />
         <option value="$PROJECT_DIR$/lib/zpattern.dart" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -257,7 +243,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Project/ZPattern/build.disabled.yaml" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558445840572" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558446109560" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="C:/Zellar/ZGestor" />
@@ -544,26 +530,8 @@
         <state relative-caret-position="-663" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CHANGELOG.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pubspec.lock">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="527">
-            <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/example/lib/view/login-view.dart">
       <provider selected="true" editor-type-id="text-editor">
@@ -606,24 +574,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pubspec.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/example/pubspec.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="22" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="13" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/zpattern.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="1465" column="22" selection-start-line="1465" selection-start-column="22" selection-end-line="1465" selection-end-column="22" />
+        <state relative-caret-position="561">
+          <caret line="1485" selection-start-line="1485" selection-end-line="1485" />
           <folding>
             <element signature="e#11843#12598#0" />
             <element signature="e#12620#13467#0" />
@@ -638,6 +592,38 @@
             <element signature="e#20202#20508#0" />
             <element signature="e#20534#21158#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/pubspec.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pubspec.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-368">
+          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CHANGELOG.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="323">
+            <caret line="19" column="49" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
