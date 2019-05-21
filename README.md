@@ -14,21 +14,15 @@ For help getting started with Flutter, view our
 samples, guidance on mobile development, and a full API reference.
 
 
-#Instalar
-
-dart_style: ^1.2.7<br>
-build_runner: ^1.4.0<br>
+##Instalar
 zpattern:<br>
     git:<br>
       url: git://github.com/kayque7k/zpattern.git
 
-#CMD    
+##CMD    
+flutter pub run lib\main
 
-flutter pub run dart_style:format -w .<br>
-flutter pub run build_runner build --delete-conflicting-outputs<br>
-flutter pub run lib\zpattern<br>
-
-#MAIN
+##MAIN
 ```z
 import 'package:zpattern/zpattern.dart' as z;
 void main() => z.main();
