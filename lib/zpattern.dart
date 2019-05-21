@@ -1,6 +1,6 @@
 import 'dart:io';
 
-const FILE = 'example/lib';
+const FILE = 'lib';
 
 void main() async {
   await injectDart();
@@ -347,7 +347,7 @@ void creatFileHomeView() async {
 }
 
 void creatFilePub() async {
-  new File('example/pubspec.yaml').createSync();
+  new File('pubspec.yaml').createSync();
 }
 
 /// escrita de arquivos .dart
@@ -1452,7 +1452,7 @@ class MyApp extends StatelessWidget {
 }
 
 void writePub() async {
-  new File('example/pubspec.yaml').writeAsStringSync("""
+  new File('pubspec.yaml').writeAsStringSync("""
 name: zellar
 description: A new Flutter project.
 

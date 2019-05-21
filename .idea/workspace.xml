@@ -4,7 +4,9 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="46f66134-09e2-4146-90e1-9cdb92001a0a" name="Default Changelist" comment="" />
+    <list default="true" id="46f66134-09e2-4146-90e1-9cdb92001a0a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/lib/zpattern.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/zpattern.dart" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,14 +57,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dart" value="2482" />
-          <entry key="md" value="79" />
+          <entry key="md" value="84" />
           <entry key="yaml" value="48" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Dart" value="2482" />
-          <entry key="Markdown" value="79" />
+          <entry key="Markdown" value="84" />
           <entry key="YAML" value="48" />
         </counts>
       </usages-collector>
@@ -70,11 +72,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/zpattern.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="1485" selection-start-line="1485" selection-end-line="1485" />
+            <state relative-caret-position="34">
+              <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
               <folding>
                 <element signature="e#11843#12598#0" />
                 <element signature="e#12620#13467#0" />
@@ -130,12 +132,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="323">
-                <caret line="19" column="49" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
+              <first_editor relative-caret-position="289">
+                <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
               </first_editor>
               <second_editor />
             </state>
@@ -178,8 +180,8 @@
         <option value="$PROJECT_DIR$/example/test/widget_test.dart" />
         <option value="$PROJECT_DIR$/pubspec.yaml" />
         <option value="$PROJECT_DIR$/test/zpattern_test.dart" />
-        <option value="$PROJECT_DIR$/lib/zpattern.dart" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/lib/zpattern.dart" />
       </list>
     </option>
   </component>
@@ -243,7 +245,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Project/ZPattern/build.disabled.yaml" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558446109560" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558446306347" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="C:/Zellar/ZGestor" />
@@ -574,27 +576,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/zpattern.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="1485" selection-start-line="1485" selection-end-line="1485" />
-          <folding>
-            <element signature="e#11843#12598#0" />
-            <element signature="e#12620#13467#0" />
-            <element signature="e#13490#13846#0" />
-            <element signature="e#13882#14359#0" />
-            <element signature="e#14384#16769#0" />
-            <element signature="e#16798#17832#0" />
-            <element signature="e#17862#18304#0" />
-            <element signature="e#18326#19185#0" />
-            <element signature="e#18415#19181#1" />
-            <element signature="e#19212#20174#0" />
-            <element signature="e#20202#20508#0" />
-            <element signature="e#20534#21158#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/example/pubspec.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -620,10 +601,31 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="323">
-            <caret line="19" column="49" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
+          <first_editor relative-caret-position="289">
+            <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/zpattern.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+          <folding>
+            <element signature="e#11843#12598#0" />
+            <element signature="e#12620#13467#0" />
+            <element signature="e#13490#13846#0" />
+            <element signature="e#13882#14359#0" />
+            <element signature="e#14384#16769#0" />
+            <element signature="e#16798#17832#0" />
+            <element signature="e#17862#18304#0" />
+            <element signature="e#18326#19185#0" />
+            <element signature="e#18415#19181#1" />
+            <element signature="e#19212#20174#0" />
+            <element signature="e#20202#20508#0" />
+            <element signature="e#20534#21158#0" />
+          </folding>
         </state>
       </provider>
     </entry>
