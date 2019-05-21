@@ -29,7 +29,7 @@ flutter pub run build_runner build --delete-conflicting-outputs<br>
 flutter pub run lib\zpattern<br>
 
 #MAIN
-```
+```z
 import 'package:zpattern/zpattern.dart' as z;
 void main() => z.main();
 ```

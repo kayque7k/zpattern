@@ -10,13 +10,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  dart_style: ^1.2.7
-  build_runner: ^1.4.0
-  shared_preferences: "^0.4.1"
-  dio: ^2.0.4
-  injector: ^1.0.5
-  sqlentity: ^1.0.6
-  mask_shifter: ^0.1.0
 
 
 dev_dependencies:

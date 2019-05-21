@@ -1,6 +1,6 @@
 import 'dart:io';
 
-const FILE = 'lib';
+const FILE = 'example/lib';
 
 void main() async {
   await injectDart();
@@ -30,6 +30,7 @@ void main() async {
   await registerUserViewDart();
   await homeViewDart();
   await MainDart();
+  await PubDart();
 }
 
 /// estrutura de arquivos .dart
@@ -165,6 +166,11 @@ void homeViewDart() async {
 
 void MainDart() async {
   await writeMain();
+}
+
+void PubDart() async {
+  await creatFilePub();
+  await writePub();
 }
 
 /// criação de arquivos .dart
@@ -338,6 +344,10 @@ void creatFileLoginView() async {
 void creatFileHomeView() async {
   new Directory('${FILE}/view').createSync(recursive: true);
   new File('${FILE}/view/home-view.dart').createSync();
+}
+
+void creatFilePub() async {
+  new File('example/pubspec.yaml').createSync();
 }
 
 /// escrita de arquivos .dart
@@ -1439,6 +1449,77 @@ class MyApp extends StatelessWidget {
     );
   }
 }""");
+}
+
+void writePub() async {
+  new File('example/pubspec.yaml').writeAsStringSync("""
+name: zellar
+description: A new Flutter project.
+
+dependencies:
+  flutter:
+    sdk: flutter
+  shared_preferences: "^0.4.1"
+  dio: ^2.0.4
+  injector: ^1.0.5
+  sqlentity: ^1.0.6
+  mask_shifter: ^0.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  
+
+flutter_icons:
+  image_path: "assets/icons/icon.png"
+  android: true
+  ios: true
+
+
+# For information on the generic Dart part of this file, see the
+# following page: https://www.dartlang.org/tools/pub/pubspec
+
+# The following section is specific to Flutter.
+flutter:
+
+uses-material-design: true
+
+assets:
+- assets/header.png
+- assets/power.png
+- assets/colaboradorTeste.jpeg
+- assets/ZGestor.png
+- assets/fundoLoginOriginal.png
+
+
+
+
+# An image asset can refer to one or more resolution-specific "variants", see
+# https://flutter.io/assets-and-images/#resolution-aware.
+
+# For details regarding adding assets from package dependencies, see
+# https://flutter.io/assets-and-images/#from-packages
+
+# To add custom fonts to your application, add a fonts section here,
+# in this "flutter" section. Each entry in this list should have a
+# "family" key with the font family name, and a "fonts" key with a
+# list giving the asset and other descriptors for the font. For
+# example:
+# fonts:
+#   - family: Schyler
+#     fonts:
+#       - asset: fonts/Schyler-Regular.ttf
+#       - asset: fonts/Schyler-Italic.ttf
+#         style: italic
+#   - family: Trajan Pro
+#     fonts:
+#       - asset: fonts/TrajanPro.ttf
+#       - asset: fonts/TrajanPro_Bold.ttf
+#         weight: 700
+#
+# For details regarding fonts from package dependencies,
+# see https://flutter.io/custom-fonts/#from-packages
+""");
 }
 
 // flutter pub run lib\zpattern
