@@ -4,6 +4,7 @@ import '../model/interector/dataManager/entity/user-entity.dart';
 import '../viewmodel/binding/binding-login-view.dart';
 import 'package:mask_shifter/mask_shifter.dart';
 import 'home-view.dart';
+import 'splash-screen-view.dart';
 
 class LoginView extends StatefulWidget {
   static final String ROUTER = "/login-view";
@@ -192,7 +193,7 @@ class _LoginState extends State<LoginView> {
       _sharedPreferences.setString(BindingLoginView.API_TOKEN, r.token);
       _binding.dialog.dismiss();
       
-      Navigator.pushReplacementNamed(context, HomeView.ROUTER);
+      Navigator.pushReplacementNamed(context, SplashScreenView.ROUTER);
     } else {
       _binding.dialog.dismiss();
       _binding.dialog.showAlertDialog("Ops...", "Tente novamente", "ok");

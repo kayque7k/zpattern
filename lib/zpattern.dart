@@ -1111,6 +1111,7 @@ void writeBindingSplashScreenView() async {
   new File('${FILE}/viewmodel/binding/binding-splash-screen-view.dart').writeAsStringSync("""
 import 'package:flutter/cupertino.dart';
 import 'package:injector/injector.dart';
+import '../../model/interector/dataManager/repository/user-repository/i-user-repository.dart';
 import '../../model/interector/remote/interface/i-login-service.dart';
 import '../../model/interector/remote/settings/api-settings.dart';
 import '../../model/utils/dialog-utils.dart';
@@ -1120,12 +1121,13 @@ class BindingSplashScreenView extends BindingObservable {
 
   static final String API_TOKEN = ApiSettings.API_TOKEN;
   static final String API_ID_USER = ApiSettings.API_ID_USER;
-  static final String API_LOGIN = ApiSettings.API_LOGIN;
-  static final String API_PASSWORD = ApiSettings.API_PASSWORD;
   static final String API_REMEMBER = ApiSettings.API_REMEMBER;
 
   DialogUtils _dialog;
   ILoginService _service = Injector.appInstance.getDependency<ILoginService>();
+  IUserRepository _repository = Injector.appInstance.getDependency<IUserRepository>();
+  
+  bool _logged = false;
   
   BindingSplashScreenView(State state) {
     _dialog = new DialogUtils(state.context);
@@ -1133,7 +1135,16 @@ class BindingSplashScreenView extends BindingObservable {
 
   ILoginService get service => _service;
 
+  IUserRepository get repository => _repository;
+
   DialogUtils get dialog => _dialog;
+  
+  bool get logged => _logged;
+
+  set logged(bool value) {
+    _logged = value;
+    notifyListeners();
+  }
 
   @override
   void dispose() {
@@ -1186,6 +1197,7 @@ class BindingHomeView extends BindingObservable {
 
 void writeSplashScreenView() async {
   new File('${FILE}/view/splash-screen-view.dart').writeAsStringSync("""
+import 'package:bloc_pattern/bloc_pattern.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -1203,44 +1215,50 @@ class SplashScreenView extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreenView> {
   BindingSplashScreenView _binding;
-  
+
   @override
   void initState() {
     super.initState();
     _binding = new BindingSplashScreenView(this);
     _checkSession();
   }
-  
+
   @override
   Widget build(BuildContext context) {
     return _buildbody();
   }
-  
-  Widget _buildbody() =>
-      new Container(
-        color: Colors.teal,
-        child: new Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            new CupertinoActivityIndicator(
-              radius: 30.0,
-            )
-          ],
-        ),
+
+  Widget _buildbody() => new BlocProvider(
+        blocs: [
+          Bloc((i) => _binding),
+        ],
+        child: new Container(
+            color: Colors.teal,
+            child: new Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                new CupertinoActivityIndicator(
+                  radius: 30.0,
+                )
+              ],
+            )),
       );
-  
+
   void _checkSession() async {
     var preferences = await SharedPreferences.getInstance();
     var token = preferences.getString(BindingSplashScreenView.API_TOKEN);
-    
-    if(token != null && !(token.length == 0)) {
+
+    if (token != null && !(token.length == 0)) {
       Navigator.pushReplacementNamed(context, HomeView.ROUTER);
-      var auth = await _binding.service.login(new LoginViewModel(email: preferences.getString(BindingSplashScreenView.API_LOGIN), password: preferences.getString(BindingSplashScreenView.API_PASSWORD)));
-      if(auth != null) {
+      
+      var user = await _binding.repository.getAscUser();
+      
+      var auth = await _binding.service.login(new LoginViewModel(email: user.userName, password: user.password));
+      if (auth != null) {
+        _binding.logged = true;
         preferences.setString(BindingSplashScreenView.API_TOKEN, auth.token);
       }
-      
     } else {
       Navigator.pushReplacementNamed(context, LoginView.ROUTER);
     }
@@ -1257,6 +1275,7 @@ import '../model/interector/dataManager/entity/user-entity.dart';
 import '../viewmodel/binding/binding-login-view.dart';
 import 'package:mask_shifter/mask_shifter.dart';
 import 'home-view.dart';
+import 'splash-screen-view.dart';
 
 class LoginView extends StatefulWidget {
   static final String ROUTER = "/login-view";
@@ -1445,7 +1464,7 @@ class _LoginState extends State<LoginView> {
       _sharedPreferences.setString(BindingLoginView.API_TOKEN, r.token);
       _binding.dialog.dismiss();
       
-      Navigator.pushReplacementNamed(context, HomeView.ROUTER);
+      Navigator.pushReplacementNamed(context, SplashScreenView.ROUTER);
     } else {
       _binding.dialog.dismiss();
       _binding.dialog.showAlertDialog("Ops...", "Tente novamente", "ok");
@@ -1518,10 +1537,12 @@ class _RegisterUserState extends State<RegisterUserView> {
 
 void writeHomeView() async {
   new File('${FILE}/view/home-view.dart').writeAsStringSync("""
+import 'package:bloc_pattern/bloc_pattern.dart';
 import 'package:flutter/material.dart';
 import 'package:scoped_model/scoped_model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../viewmodel/binding/binding-home-view.dart';
+import '../viewmodel/binding/binding-splash-screen-view.dart';
 import '../viewmodel/user-viewmodel.dart';
 import 'splash-screen-view.dart';
 
@@ -1544,18 +1565,23 @@ class _HomeState extends State<HomeView> {
 
   @override
   Widget build(BuildContext context) {
+    final BindingSplashScreenView bloc = BlocProvider.getBloc<BindingSplashScreenView>() ?? new BindingSplashScreenView(this);
+
     return new RaisedButton(
-      onPressed: () async {
-        var preferences = await SharedPreferences.getInstance();
-        preferences.clear();
-        await _binding.repository.delete((await _binding.repository.getAscUser()));
-        Navigator.pushReplacementNamed(context, SplashScreenView.ROUTER);
-      },
-      child: new ScopedModel<UserViewModel>(
-        model: _binding.user,
-        child: new ScopedModelDescendant<UserViewModel>(builder: (context, child, model) => new Text("\${_binding.user.nome}")),
-      ),
-    );
+        onPressed: () async {
+          var preferences = await SharedPreferences.getInstance();
+          preferences.clear();
+          await _binding.repository.delete((await _binding.repository.getAscUser()));
+          Navigator.pushReplacementNamed(context, SplashScreenView.ROUTER);
+        },
+        child: new ScopedModel<BindingSplashScreenView>(
+            model: bloc,
+            child: new ScopedModelDescendant<BindingSplashScreenView>(
+              builder: (context, child, modelb) => new ScopedModel<UserViewModel>(
+                    model: _binding.user,
+                    child: new ScopedModelDescendant<UserViewModel>(builder: (context, child, modelU) => new Text("\${(modelb.logged) ? modelU.nome : "Não Autorizado"}")),
+                  ),
+            )));
   }
 
   void loadName() async {
