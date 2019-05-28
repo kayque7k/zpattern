@@ -1464,6 +1464,9 @@ dependencies:
   injector: ^1.0.5
   sqlentity: ^1.0.6
   mask_shifter: ^0.1.0
+  scoped_model: ^1.0.1
+  bloc_pattern: ^2.1.9+3
+
 
 dev_dependencies:
   flutter_test:
