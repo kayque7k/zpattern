@@ -1,6 +1,6 @@
 import 'dart:io';
 
-const FILE = 'lib';
+const FILE = 'example/lib';
 
 void main() async {
   await injectDart();
@@ -838,58 +838,126 @@ class DialogUtils {
 
 void writeViewModelLogin() async {
   new File('${FILE}/viewmodel/login-viewmodel.dart').writeAsStringSync("""
-class LoginViewModel{
-  String email;
-  String password;
+import 'package:bloc_pattern/bloc_pattern.dart';
+import 'package:scoped_model/scoped_model.dart';
 
-  LoginViewModel({this.email : "", this.password : ""});
+class LoginViewModel extends Model implements BlocBase {
+  
+  String _email;
+  String _password;
+
+  LoginViewModel({var email : "", var  password : ""}){
+   this.email = email;
+   this.password = password;
+  }
 
   Map toMap(){
     return {"email": email, "password": password};
   }
+
+  String get password => _password;
+
+  set password(String value) {
+    _password = value;
+    notifyListeners();
+  }
+
+  String get email => _email;
+
+  set email(String value) {
+    _email = value;
+    notifyListeners();
+  }
+
+  @override
+  void dispose() {
+  }
+
+  @override
+  bool get hasListeners => null;
 }
 """);
 }
 
 void writeViewModelUser() async {
   new File('${FILE}/viewmodel/user-viewmodel.dart').writeAsStringSync("""
-class UserViewModel{
+import 'package:bloc_pattern/bloc_pattern.dart';
+import 'package:scoped_model/scoped_model.dart';
 
+class UserViewModel extends Model implements BlocBase {
+  
+  String _nome = "";
+
+  UserViewModel({var nome : ""}){
+    this.nome = nome;
+  }
+  
+  String get nome => _nome;
+  
+  set nome(String value) {
+    _nome = value;
+    notifyListeners();
+  }
+  
+  @override
+  void dispose() {
+  }
+  
+  @override
+  bool get hasListeners => null;
 }
 """);
 }
 
 void writeViewModelToken() async {
   new File('${FILE}/viewmodel/token-viewmodel.dart').writeAsStringSync("""
-class TokenViewModel{
-  String token;
-  String idUser;
+import 'package:bloc_pattern/bloc_pattern.dart';
+import 'package:scoped_model/scoped_model.dart';
 
-  TokenViewModel({this.token, this.idUser});
+class TokenViewModel extends Model implements BlocBase {
+  String _token;
+  String _idUser;
+
+  TokenViewModel({var token, var idUser}){
+    this.token = token;
+    this.idUser = idUser;
+  }
 
   factory TokenViewModel.fromJson(Map<String, dynamic> json){
     return new TokenViewModel(token: json["token"], idUser: json["idUser"]);
   }
+
+  String get idUser => _idUser;
+
+  set idUser(String value) {
+    _idUser = value;
+    notifyListeners();
+  }
+
+  String get token => _token;
+
+  set token(String value) {
+    _token = value;
+    notifyListeners();
+  }
+
+  @override
+  void dispose() {
+  }
+
+  @override
+  bool get hasListeners => null;
+  
 }
 """);
 }
 
 void writeBindingObservableView() async {
   new File('${FILE}/viewmodel/binding/binding-observable.dart').writeAsStringSync("""
-import 'package:flutter/cupertino.dart';
+import 'package:bloc_pattern/bloc_pattern.dart';
+import 'package:scoped_model/scoped_model.dart';
 
-abstract class BindingObservable {
-  final State _state;
-
-  BindingObservable(this._state);
-
-  State get state => _state;
-
-  void notifyChanged() {
-    try {
-      _state.setState((){});
-    } catch (e) {}
-  }
+abstract class BindingObservable extends Model implements BlocBase {
 }
 """);
 }
@@ -898,9 +966,20 @@ void writeBindingRegisterUserView() async {
   new File('${FILE}/viewmodel/binding/binding-register-user-view.dart').writeAsStringSync("""
 import 'package:flutter/cupertino.dart';
 
-class BindingRegisterUserView {
+import 'binding-observable.dart';
 
+class BindingRegisterUserView extends BindingObservable {
+  
+  BindingRegisterUserView(State state);
+  
+  @override
+  void dispose() {
+  }
+  
+  @override
+  bool get hasListeners => null;
 }
+
 """);
 }
 
@@ -908,7 +987,18 @@ void writeBindingAlterUserView() async {
   new File('${FILE}/viewmodel/binding/binding-alter-user-view.dart').writeAsStringSync("""
 import 'package:flutter/cupertino.dart';
 
-class BindingAlterUserView {
+import 'binding-observable.dart';
+
+class BindingAlterUserView extends BindingObservable {
+  
+  BindingAlterUserView(State state);
+  
+  @override
+  void dispose() {
+  }
+
+  @override
+  bool get hasListeners => null;
 
 }
 """);
@@ -946,13 +1036,16 @@ class BindingLoginView extends BindingObservable {
 
   final LoginViewModel _login = new LoginViewModel();
 
-  BindingLoginView(State state) : super(state) {
+  BindingLoginView(State state) {
     _dialog = new DialogUtils(state.context);
   }
 
   bool get estrangeiro => _estrangeiro;
 
-  set estrangeiro(bool value)  => state.setState(() => _estrangeiro = value);
+  set estrangeiro(bool value)  {
+    _estrangeiro = value;
+    notifyListeners();
+  }
   
   DialogUtils get dialog => _dialog;
 
@@ -962,23 +1055,38 @@ class BindingLoginView extends BindingObservable {
 
   bool get lembrarSenha => _lembrarSenha;
 
-  set lembrarSenha(bool value)   => state.setState(() => _lembrarSenha = value);
+  set lembrarSenha(bool value) {
+    _lembrarSenha = value;
+    notifyListeners();
+  }
 
   bool get click => _click;
 
-  set click(bool value) => state.setState(() => _click = value);
+  set click(bool value) {
+    _click = value;
+    notifyListeners();
+  }
 
   bool get clicKCpf => _clicKCpf;
 
-  set clicKCpf(bool value) => state.setState(() => _clicKCpf = value);
+  set clicKCpf(bool value) {
+    _clicKCpf = value;
+    notifyListeners();
+  }
 
   bool get invalido => _invalido;
   
-  set invalido(bool value) => state.setState(() => _invalido = value);
+  set invalido(bool value) {
+    _invalido = value;
+    notifyListeners();
+  }
 
   bool get auth => _auth;
   
-  set auth(bool value) => state.setState(() => _auth = value);
+  set auth(bool value) {
+    _auth = value;
+    notifyListeners();
+  }
 
   FocusNode get password => _password;
 
@@ -987,6 +1095,13 @@ class BindingLoginView extends BindingObservable {
   FocusNode get passport => _passport;
 
   IUserRepository get repository => _repository;
+
+  @override
+  void dispose() {
+  }
+
+  @override
+  bool get hasListeners => null;
 
 }
 """);
@@ -1012,13 +1127,20 @@ class BindingSplashScreenView extends BindingObservable {
   DialogUtils _dialog;
   ILoginService _service = Injector.appInstance.getDependency<ILoginService>();
   
-  BindingSplashScreenView(State state) : super(state) {
+  BindingSplashScreenView(State state) {
     _dialog = new DialogUtils(state.context);
   }
 
   ILoginService get service => _service;
 
   DialogUtils get dialog => _dialog;
+
+  @override
+  void dispose() {
+  }
+
+  @override
+  bool get hasListeners => null;
 }
 """);
 }
@@ -1030,29 +1152,35 @@ import 'package:injector/injector.dart';
 import '../../model/interector/dataManager/repository/user-repository/i-user-repository.dart';
 import '../../model/interector/remote/settings/api-settings.dart';
 import '../../model/utils/dialog-utils.dart';
+import '../user-viewmodel.dart';
 import 'binding-observable.dart';
 
 class BindingHomeView extends BindingObservable {
   
-  String _nome = "Carregando...";
   static final String API_TOKEN = ApiSettings.API_TOKEN;
   final IUserRepository _repository = Injector.appInstance.getDependency<IUserRepository>();
+  UserViewModel user;
   
   DialogUtils _dialog;
 
-  BindingHomeView(State state) : super(state) {
+  BindingHomeView(State state) {
     _dialog = new DialogUtils(state.context);
+    user = UserViewModel(nome: "Carregando...");
   }
-  
-  String get nome => _nome;
-
-  set nome(String value) => this.state.setState(() => _nome = value);
   
   DialogUtils get dialog => _dialog;
 
   IUserRepository get repository => _repository;
+
+  @override
+  void dispose() {
+  }
+
+  @override
+  bool get hasListeners => null;
   
 }
+
 """);
 }
 
@@ -1331,6 +1459,8 @@ void writeAlterUserView() async {
   new File('${FILE}/view/alter-user-view.dart').writeAsStringSync("""
 import 'package:flutter/material.dart';
 
+import '../viewmodel/binding/binding-alter-user-view.dart';
+
 class AlterUserView extends StatefulWidget {
   static final String ROUTER = "/alter-user-view";
 
@@ -1340,10 +1470,17 @@ class AlterUserView extends StatefulWidget {
 
 class _AlterUserState extends State<AlterUserView> {
 
+  BindingAlterUserView _binding;
+  
+  @override
+  void initState() {
+    _binding = new BindingAlterUserView(this);
+    super.initState();
+  }
+  
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    return null;
+    return new Container();
   }
 }
 """);
@@ -1352,6 +1489,7 @@ class _AlterUserState extends State<AlterUserView> {
 void writeRegisterUserView() async {
   new File('${FILE}/view/register-user-view.dart').writeAsStringSync("""
 import 'package:flutter/material.dart';
+import '../viewmodel/binding/binding-register-user-view.dart';
 
 class RegisterUserView extends StatefulWidget {
   static final String ROUTER = "/register-user-view";
@@ -1362,10 +1500,17 @@ class RegisterUserView extends StatefulWidget {
 
 class _RegisterUserState extends State<RegisterUserView> {
 
+  BindingRegisterUserView _binding;
+  
+  @override
+  void initState() {
+    _binding = new BindingRegisterUserView(this);
+    super.initState();
+  }
+  
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    return null;
+    return new Container();
   }
 }
 """);
@@ -1374,8 +1519,10 @@ class _RegisterUserState extends State<RegisterUserView> {
 void writeHomeView() async {
   new File('${FILE}/view/home-view.dart').writeAsStringSync("""
 import 'package:flutter/material.dart';
+import 'package:scoped_model/scoped_model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../viewmodel/binding/binding-home-view.dart';
+import '../viewmodel/user-viewmodel.dart';
 import 'splash-screen-view.dart';
 
 class HomeView extends StatefulWidget {
@@ -1404,12 +1551,15 @@ class _HomeState extends State<HomeView> {
         await _binding.repository.delete((await _binding.repository.getAscUser()));
         Navigator.pushReplacementNamed(context, SplashScreenView.ROUTER);
       },
-      child: new Text("\${_binding.nome}"),
+      child: new ScopedModel<UserViewModel>(
+        model: _binding.user,
+        child: new ScopedModelDescendant<UserViewModel>(builder: (context, child, model) => new Text("\${_binding.user.nome}")),
+      ),
     );
   }
 
   void loadName() async {
-    _binding.nome = (await _binding.repository.getAscUser()).userName;
+    _binding.user.nome = (await _binding.repository.getAscUser()).userName;
   }
 }
 """);
