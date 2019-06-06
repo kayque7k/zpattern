@@ -5,38 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="46f66134-09e2-4146-90e1-9cdb92001a0a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/model/config/inject.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/model/interector/dataManager/dao/dao-user/dao-user.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/model/interector/dataManager/dao/dao-user/i-dao-user.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/model/interector/dataManager/database/z-data-base.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/model/interector/dataManager/entity/user-entity.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/model/interector/dataManager/repository/user-repository/i-user-repository.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/model/interector/dataManager/repository/user-repository/user-repository.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/model/interector/remote/api/login-service.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/model/interector/remote/api/service.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/model/interector/remote/interface/i-login-service.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/model/interector/remote/settings/api-settings.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/model/utils/dialog-utils.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/view/alter-user-view.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/view/home-view.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/view/login-view.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/view/register-user-view.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/view/splash-screen-view.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/viewmodel/binding/binding-alter-user-view.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/viewmodel/binding/binding-home-view.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/viewmodel/binding/binding-login-view.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/viewmodel/binding/binding-observable.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/viewmodel/binding/binding-register-user-view.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/viewmodel/binding/binding-splash-screen-view.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/viewmodel/login-viewmodel.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/viewmodel/token-viewmodel.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/viewmodel/user-viewmodel.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/zpattern.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/zpattern.dart" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -123,8 +91,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/zpattern.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="38" column="10" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
+            <state relative-caret-position="34">
+              <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -183,8 +151,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1930" />
-    <option name="y" value="-7" />
+    <option name="x" value="-10" />
+    <option name="y" value="-10" />
     <option name="width" value="1938" />
     <option name="height" value="1046" />
   </component>
@@ -231,7 +199,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Project/ZPattern/build.disabled.yaml" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559155626149" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559837846584" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="C:/Zellar/Chansey" />
@@ -272,7 +240,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1927" y="-4" width="1488" height="803" extended-state="6" />
+    <frame x="-7" y="-7" width="1488" height="803" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.498503" visible="true" weight="0.2951049" />
@@ -642,8 +610,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/zpattern.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="38" column="10" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
+        <state relative-caret-position="34">
+          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
         </state>
       </provider>
     </entry>

@@ -1,6 +1,6 @@
 import 'dart:io';
 
-const FILE = 'example/lib';
+const FILE = 'lib';
 
 void main() async {
   //DIP
