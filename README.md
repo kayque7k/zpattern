@@ -16,9 +16,9 @@ samples, guidance on mobile development, and a full API reference.
 
 Instalar<br>
 ```z
-zpattern:
-    git:
-        url: git://github.com/kayque7k/zpattern.git
+    zpattern:
+        git:
+            url: git://github.com/kayque7k/zpattern.git
 ```
 CMD<br>    
 ```z
