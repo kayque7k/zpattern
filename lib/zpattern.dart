@@ -1593,7 +1593,7 @@ class _HomeState extends State<HomeView> {
   }
 
   void loadName() async {
-    _binding.user.nome = (await _binding.repository.getAscUser()).userName;
+    Future.delayed(new Duration(seconds: 2),() async => _binding.user.nome = (await _binding.repository.getAscUser()).userName);
   }
 }
 """);
