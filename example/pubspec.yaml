@@ -11,6 +11,8 @@ dependencies:
   mask_shifter: ^0.1.0
   scoped_model: ^1.0.1
   bloc_pattern: ^2.1.9+3
+  threading: ^0.0.10
+
 
 
 dev_dependencies:

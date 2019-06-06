@@ -3,32 +3,40 @@ import 'dart:io';
 const FILE = 'example/lib';
 
 void main() async {
+  //DIP
   await injectDart();
+  //REPOSITORY
   await daoUserDart();
   await idaoUserDart();
   await zDataBaseDart();
   await userEntityDart();
   await userRepositoryDart();
   await iUserRepositoryDart();
+  //SERVICE
   await serviceDart();
   await loginServiceDart();
   await iLoginServiceDart();
   await apiSettingsDart();
+  //UTILS
   await dialogUtilsDart();
+  //VIEWMODFL
   await viewModelLoginDart();
   await viewModelUserDart();
   await viewModelTokenDart();
+  //BINDING
   await bindingObservableViewDart();
   await bindingLoginViewDart();
   await bindingRegisterUserViewDart();
   await bindingAlterUserViewDart();
   await bindingSplashScreenViewDart();
   await bindingHomeViewDart();
+  //VIEW
   await splashScreenViewDart();
   await loginViewDart();
   await alterViewDart();
   await registerUserViewDart();
   await homeViewDart();
+  //CONFIG
   await MainDart();
   await PubDart();
 }
