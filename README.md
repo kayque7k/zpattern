@@ -15,13 +15,15 @@ samples, guidance on mobile development, and a full API reference.
 
 
 Instalar<br>
-zpattern:<br>
-    git:<br>
-      url: git://github.com/kayque7k/zpattern.git
-
+```z
+zpattern:
+    git:
+        url: git://github.com/kayque7k/zpattern.git
+```
 CMD<br>    
+```z
 flutter pub run lib\main
-
+```
 MAIN<br>
 ```z
 import 'package:zpattern/zpattern.dart' as z;
